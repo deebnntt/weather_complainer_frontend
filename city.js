@@ -13,7 +13,8 @@ class City {
 	static renderDropDown(json) {
 		json.forEach(city => {
 			let cityOption = document.createElement('option');
-			cityOption.innerText = `${city.name}, ${city.state}`;
+			let cityName = city.name.replace(/_/g, ' ');
+			cityOption.innerText = `${cityName}, ${city.state}`;
 			cityOption.dataset.id = city.id;
 			document.getElementById('city-list').add(cityOption);
 		});
@@ -41,13 +42,18 @@ class City {
 		let highTemp = json.forecast.simpleforecast.forecastday[0].high.fahrenheit;
 		let lowTemp = json.forecast.simpleforecast.forecastday[0].low.fahrenheit;
 		let prec = json.forecast.simpleforecast.forecastday[0].qpf_allday.in;
+		let conditions = json.forecast.simpleforecast.forecastday[0].conditions;
+		let avehumidity = json.forecast.simpleforecast.forecastday[0].avehumidity;
+		let avewind = json.forecast.simpleforecast.forecastday[0].avewind.mph;
 		let myObj = {};
 		myObj[cityId] = {
 			high: parseInt(highTemp),
 			low: parseInt(lowTemp),
-			precipitation: prec
+			precipitation: prec,
+			conditions: conditions,
+			avg_humidity: avehumidity,
+			avg_wind: avewind
 		};
-		console.log(myObj);
 		return myObj;
 	}
 }

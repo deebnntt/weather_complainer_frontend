@@ -2,18 +2,29 @@ body {
 	background-color: #a7aea2;
 	color: black;
 	font-family: Montserrat;
-	font-size: 25px;
 }
 
 #header {
 	text-align: center;
 	margin: auto;
-	width: 60%;
+	width: 80%;
 }
 
 h2 {
 	font-family: Shrikhand;
-	font-size: 55px;
+	font-size: 70px;
+	color: black;
+}
+
+img {
+	text-align: center;
+}
+
+h4 {
+	padding: 0px;
+	margin: 0px;
+	font-family: Shrikhand;
+	font-size: 25px;
 }
 
 #form-div {
@@ -23,17 +34,53 @@ h2 {
 
 select {
 	width: 50%;
-	padding: 16px 20px;
+	padding: 20px 20px;
+	font-family: Montserrat;
+	font-size: 25px;
 	border: none;
 	border-radius: 4px;
 	background-color: white;
 }
 
 #complaint-div {
-	width: 60%;
+	display: none;
+	width: 50%;
+	padding: 10px 10px;
 	margin: auto;
 	background-color: white;
 	border: 2px solid #c88e34;
 	align: center;
 	box-shadow: 10px 10px #c88e34;
+	font-size: 25px;
+}
+
+#stats-div {
+	display: none;
+	width: 50%;
+	padding: 10px 10px;
+	margin: auto;
+	background-color: white;
+	border: 2px solid #c88e34;
+	align: center;
+	box-shadow: 10px 10px #c88e34;
+	font-size: 18px;
+}
+
+td {
+	color: #c88e34;
+	td-align: left;
+	text-align: center;
+	font-size: 22px;
+}
+
+#hist-div {
+	display: none;
+	width: 50%;
+	padding: 10px 10px;
+	margin: auto;
+	background-color: white;
+	border: 2px solid #c88e34;
+	align: center;
+	box-shadow: 10px 10px #c88e34;
+	font-size: 18px;
 }

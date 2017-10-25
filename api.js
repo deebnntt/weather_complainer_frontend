@@ -12,7 +12,21 @@ class API {
 		let cityId = Object.keys(current)[0];
 		fetch(`${this.baseURL}/historical_conditions/${cityId}`)
 			.then(res => res.json())
-			.then(json => complexAlgorithm(json, current));
-		// .then(json => console.log(json));
+			.then(json => complexAlgorithm(json, current))
+			.then(obj => renderStats(obj));
+	}
+
+	postNewHistoricData(postData) {
+		let newPostData = {};
+		newPostData['results'] = postData;
+		let jsonPostData = JSON.stringify(newPostData);
+		fetch(`${this.baseURL}/historical_conditions/update`, {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accepts: 'application/json'
+			},
+			body: jsonPostData
+		});
 	}
 }
