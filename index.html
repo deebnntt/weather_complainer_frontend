@@ -2,18 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="application.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Shrikhand" rel="stylesheet">
     <title>Weather Complainer</title>
   </head>
   <body>
-    <h1>Weather Complainer</h1>
 
+    <div id="header">
+      <h2>Weather Complainer</h2>
+    </div>
+
+    <div id="form-div">
     <select id="city-list">
-      <option disabled selected value> -- select a city -- </option>
+      <option disabled selected value> - select a city - </option>
     </select>
+    </div>
+
+    <br>
+    <br>
 
     <div id="complaint-div">
       <ul id="complaint-list">
       </ul>
+    </div>
+
     </div>
 
     <script src="api.js"></script>
