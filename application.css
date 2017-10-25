@@ -5,9 +5,10 @@ body {
 }
 
 #header {
+	position: relative;
 	text-align: center;
 	margin: auto;
-	width: 80%;
+	width: 60%;
 }
 
 h2 {
@@ -16,8 +17,18 @@ h2 {
 	color: black;
 }
 
-img {
-	text-align: center;
+#img {
+	position: fixed;
+	top: 10%;
+	left: 10%;
+	width: 200px;
+}
+
+#img:hover {
+	top: 10%;
+	transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	-webkit-transform: rotate(-25deg);
 }
 
 h4 {
