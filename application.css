@@ -2,6 +2,7 @@ body {
 	background-color: #a7aea2;
 	color: black;
 	font-family: Montserrat;
+	cursor: url('cursor.ico'), default;
 }
 
 #header {
@@ -22,13 +23,16 @@ h2 {
 	top: 10%;
 	left: 10%;
 	width: 200px;
+	transform: rotate(10deg);
+	-ms-transform: rotate(10deg);
+	-webkit-transform: rotate(10deg);
 }
 
 #img:hover {
 	top: 10%;
-	transform: rotate(-25deg);
-	-ms-transform: rotate(-25deg);
-	-webkit-transform: rotate(-25deg);
+	transform: rotate(-15deg);
+	-ms-transform: rotate(-15deg);
+	-webkit-transform: rotate(-15deg);
 }
 
 h4 {
@@ -51,6 +55,7 @@ select {
 	border: none;
 	border-radius: 4px;
 	background-color: white;
+	cursor: url('cursor.ico'), default;
 }
 
 #complaint-div {

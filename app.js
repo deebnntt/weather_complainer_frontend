@@ -25,7 +25,13 @@ function complexAlgorithm(historic, current) {
 	if (historic.daily_avg_high - current.high >= 10) {
 		complaintArr.push("It's going to be unseasonably cold today");
 	}
-	if (current.high - historic.daily_avg_high >= 10 && current.humidity > 75) {
+	if (current.avg_humidity > 75) {
+		complaintArr.push("It's so humid!");
+	}
+	if (
+		current.high - historic.daily_avg_high >= 10 &&
+		current.avg_humidity > 75
+	) {
 		complaintArr.push("It's so muggy and gross!");
 	}
 	if (complaintArr.length === 0) {
