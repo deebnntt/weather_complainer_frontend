@@ -8,6 +8,14 @@ class API {
 			.then(json => City.renderDropDown(json));
 	}
 
+	checkTodaysData() {
+		fetch(`${this.baseURL}/historical_conditions/`)
+			.then(res => res.json())
+			.then(json => {
+				if (json === false) getTodaysData();
+			});
+	}
+
 	getHistoricWeather(current) {
 		let cityId = Object.keys(current)[0];
 		fetch(`${this.baseURL}/historical_conditions/${cityId}`)

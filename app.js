@@ -1,9 +1,32 @@
 api = new API();
 
 window.addEventListener('onload', api.getCities());
-// document.getElementById("myDIV").style.display = "none";
-// document.getElementById("myDIV").style.display = "none";
-// document.getElementById("myDIV").style.display = "none";
+window.addEventListener('onload', api.checkTodaysData());
+//
+// var img = new Image();
+// img.src = 'Sunless.png';
+// img.id = 'terrance';
+// img.onload = function() {
+// 	draw(this);
+// };
+// function draw(img) {
+// 	var canvas = document.getElementById('canvas');
+// 	var ctx = canvas.getContext('2d');
+// 	ctx.drawImage(img, 0, 0);
+// 	img.style.display = 'none';
+// 	var imageData = ctx.getImageData(0, 0, 600, 600);
+// 	var data = imageData.data;
+//
+// 	var invert = function() {
+// 		for (var i = 0; i < data.length; i += 4) {
+// 			data[i] = 255 - data[i]; // red
+// 			data[i + 1] = 255 - data[i + 1]; // green
+// 			data[i + 2] = 255 - data[i + 2]; // blue
+// 		}
+// 		ctx.putImageData(imageData, 0, 0);
+// 	};
+// 	img.addEventListener('hover', invert);
+// }
 
 function complexAlgorithm(historic, current) {
 	historic = historic.filter(his => {
@@ -13,7 +36,7 @@ function complexAlgorithm(historic, current) {
 	let complaintArr = [];
 	for (var key in current) current = current[key];
 	let avgHigh = historic.valueOf().daily_avg_high;
-	if (current.precipitation > 0.15) {
+	if (current.precipitation > 0.15 || current.conditions === 'Rain') {
 		complaintArr.push("It's going to rain!");
 	}
 	if (current.high - historic.daily_avg_high >= 10) {
@@ -107,13 +130,13 @@ function getTodaysData() {
 		.then(results => api.postNewHistoricData(results));
 }
 let stationIDs = {
-	new_york: 'USW00094728',
-	boston: 'USW00014739',
-	chicago: 'USC00111497',
-	austin: 'USC00410433',
-	phoenix: 'USW00023183',
-	la: 'USW00093134',
-	honolulu: 'USW00022521'
+	New_York: 'USW00094728',
+	Boston: 'USW00014739',
+	Chicago: 'USC00111497',
+	Austin: 'USC00410433',
+	Phoenix: 'USW00023183',
+	Los_Angeles: 'USW00093134',
+	Honolulu: 'USW00022521'
 };
 let dataTypeIDs = {
 	daily_avg_high: 'dly-tmax-normal',
