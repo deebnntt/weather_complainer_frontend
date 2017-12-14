@@ -8,3 +8,5 @@ A whimsical JS app that provides a daily weather complaint, based on current and
 A collaboration with @stopvoldemort - https://github.com/stopvoldemort
 
 Demo Video: https://vimeo.com/247390813
+
+![](https://media.giphy.com/media/xUOxfmXPN2x0zgTLbO/giphy.gif)
