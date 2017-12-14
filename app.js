@@ -2,31 +2,6 @@ api = new API();
 
 window.addEventListener('onload', api.getCities());
 window.addEventListener('onload', api.checkTodaysData());
-//
-// var img = new Image();
-// img.src = 'Sunless.png';
-// img.id = 'terrance';
-// img.onload = function() {
-// 	draw(this);
-// };
-// function draw(img) {
-// 	var canvas = document.getElementById('canvas');
-// 	var ctx = canvas.getContext('2d');
-// 	ctx.drawImage(img, 0, 0);
-// 	img.style.display = 'none';
-// 	var imageData = ctx.getImageData(0, 0, 600, 600);
-// 	var data = imageData.data;
-//
-// 	var invert = function() {
-// 		for (var i = 0; i < data.length; i += 4) {
-// 			data[i] = 255 - data[i]; // red
-// 			data[i + 1] = 255 - data[i + 1]; // green
-// 			data[i + 2] = 255 - data[i + 2]; // blue
-// 		}
-// 		ctx.putImageData(imageData, 0, 0);
-// 	};
-// 	img.addEventListener('hover', invert);
-// }
 
 function complexAlgorithm(historic, current) {
 	historic = historic.filter(his => {
@@ -214,6 +189,7 @@ function buildApiResults(results) {
 			delete myObj[city].month_to_date_avg_precip;
 		}
 	}
+	console.log(myObj)
 	return myObj;
 }
 function findCityByStation(stationID) {
