@@ -6,3 +6,5 @@ A whimsical JS app that provides a daily weather complaint, based on current and
 + User Interface with custom CSS and graphics
 
 A collaboration with @stopvoldemort - https://github.com/stopvoldemort
+
+Demo Video: https://vimeo.com/247390813
